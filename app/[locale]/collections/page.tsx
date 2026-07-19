@@ -31,7 +31,9 @@ export default async function CollectionsPage({
               >
                 <PlaceholderImage
                   label={name}
+                  src={collection.heroImage}
                   showLabel={false}
+                  sizes="(min-width: 640px) 50vw, 100vw"
                   className="aspect-[4/5] w-full transition-transform duration-500 group-hover:scale-[1.02]"
                 />
                 <h2 className="mt-4 text-lg text-ink">{name}</h2>

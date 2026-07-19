@@ -6,11 +6,13 @@ export type PlaceholderPost = {
   excerptEn: string;
   bodyVi: string;
   bodyEn: string;
+  coverImage: string;
 };
 
 export const posts: PlaceholderPost[] = [
   {
     slug: "chuyen-vai-organic",
+    coverImage: "/images/journal/chuyen-vai-organic.jpg",
     titleVi: "Vì sao chúng tôi chỉ dùng cotton organic",
     titleEn: "Why we only work with organic cotton",
     excerptVi: "Một chuyến thăm xưởng dệt đối tác — và lý do chất liệu quyết định tất cả.",
@@ -22,6 +24,7 @@ export const posts: PlaceholderPost[] = [
   },
   {
     slug: "gia-minh-bach",
+    coverImage: "/images/journal/gia-minh-bach.jpg",
     titleVi: "Bên trong một mức giá minh bạch",
     titleEn: "Inside an honest price tag",
     excerptVi: "Điều gì thực sự tạo nên giá thành một chiếc áo — và phần nào là markup.",
@@ -33,6 +36,7 @@ export const posts: PlaceholderPost[] = [
   },
   {
     slug: "tay-nghe-may-do",
+    coverImage: "/images/journal/tay-nghe-may-do.jpg",
     titleVi: "Bên trong xưởng may đo của chúng tôi",
     titleEn: "Inside our tailoring atelier",
     excerptVi: "Gặp gỡ những người thợ đứng sau từng đường kim mũi chỉ của Maison DnA.",

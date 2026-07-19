@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { PageHero } from "@/components/storefront/page-hero";
 import { ProductCard } from "@/components/storefront/product-card";
+import { PlaceholderImage } from "@/components/ui/placeholder-image";
 import {
   collections,
   getCollectionBySlug,
@@ -36,6 +37,7 @@ export default async function CollectionDetailPage({
   return (
     <>
       <PageHero eyebrow={t("title")} title={name} intro={desc || t("detailIntro")} />
+      <PlaceholderImage label={name} src={collection.heroImage} showLabel={false} className="aspect-[21/9] w-full" />
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 gap-x-6 gap-y-12 lg:grid-cols-3">
           {products.map((product) => (

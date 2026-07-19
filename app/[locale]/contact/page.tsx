@@ -1,5 +1,6 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { PageHero } from "@/components/storefront/page-hero";
+import { PlaceholderImage } from "@/components/ui/placeholder-image";
 import { Button } from "@/components/ui/button";
 
 export default async function ContactPage({
@@ -16,6 +17,12 @@ export default async function ContactPage({
       <PageHero title={t("title")} intro={t("intro")} />
       <div className="mx-auto grid max-w-5xl gap-12 px-4 py-14 sm:px-6 lg:grid-cols-[1fr_1.2fr] lg:px-8">
         <div className="space-y-6">
+          <PlaceholderImage
+            label="Maison DnA showroom"
+            src="/images/accent/contact.jpg"
+            showLabel={false}
+            className="aspect-[4/5] w-full"
+          />
           <div>
             <p className="text-xs tracking-[0.1em] uppercase text-muted-foreground">
               {t("emailUs")}

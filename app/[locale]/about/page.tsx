@@ -21,11 +21,24 @@ export default async function AboutPage({
     <>
       <PageHero eyebrow={t("eyebrow")} title={t("title")} intro={t("lead")} />
       <div className="mx-auto max-w-4xl px-4 py-14 sm:px-6 lg:px-8">
-        <PlaceholderImage label="Atelier — behind the scenes" className="aspect-[16/9] w-full" />
+        <PlaceholderImage
+          label="Atelier — behind the scenes"
+          src="/images/about/atelier.jpg"
+          priority
+          showLabel={false}
+          className="aspect-[16/9] w-full"
+        />
         <div className="mt-10 grid gap-8 sm:grid-cols-2">
           <p className="text-base leading-relaxed text-ink">{t("body1")}</p>
           <p className="text-base leading-relaxed text-ink">{t("body2")}</p>
         </div>
+
+        <PlaceholderImage
+          label="Craftsmanship detail"
+          src="/images/about/craft-detail.jpg"
+          showLabel={false}
+          className="mt-10 aspect-[21/9] w-full"
+        />
 
         <div className="mt-16 border-t border-border pt-10">
           <h2 className="text-xs tracking-[0.14em] uppercase text-muted-foreground">

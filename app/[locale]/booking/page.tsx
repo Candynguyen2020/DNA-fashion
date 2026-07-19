@@ -1,5 +1,6 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { PageHero } from "@/components/storefront/page-hero";
+import { PlaceholderImage } from "@/components/ui/placeholder-image";
 import { Button } from "@/components/ui/button";
 
 export default async function BookingPage({
@@ -14,7 +15,13 @@ export default async function BookingPage({
   return (
     <>
       <PageHero eyebrow={t("eyebrow")} title={t("title")} intro={t("intro")} />
-      <div className="mx-auto max-w-2xl px-4 py-14 sm:px-6 lg:px-8">
+      <div className="mx-auto grid max-w-6xl gap-12 px-4 py-14 sm:px-6 lg:grid-cols-2 lg:px-8">
+        <PlaceholderImage
+          label="Private styling consultation"
+          src="/images/accent/booking.jpg"
+          showLabel={false}
+          className="aspect-[4/5] w-full lg:sticky lg:top-24 lg:h-fit"
+        />
         <form className="space-y-5">
           <div className="grid gap-5 sm:grid-cols-2">
             <Field id="booking-name" label={t("nameLabel")} type="text" />

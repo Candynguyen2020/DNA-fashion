@@ -2,6 +2,8 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { LinkButton } from "@/components/ui/button";
 import { PlaceholderImage } from "@/components/ui/placeholder-image";
+import { posts } from "@/lib/placeholder-journal";
+import type { AppLocale } from "@/i18n/routing";
 
 export default async function HomePage({
   params,
@@ -11,6 +13,7 @@ export default async function HomePage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("home");
+  const loc = locale as AppLocale;
 
   const promises = [
     t("promise.materials"),
@@ -24,6 +27,9 @@ export default async function HomePage({
       <section className="relative flex min-h-[85vh] items-end border-b border-border">
         <PlaceholderImage
           label="Hero — lookbook photography"
+          src="/images/hero.jpg"
+          priority
+          sizes="100vw"
           className="absolute inset-0 -z-10"
         />
         <div className="relative mx-auto w-full max-w-7xl px-4 pb-14 sm:px-6 lg:px-8">
@@ -62,8 +68,8 @@ export default async function HomePage({
           {t("categoriesTitle")}
         </h2>
         <div className="mt-10 grid gap-8 sm:grid-cols-2">
-          <CategoryCard href="/women" label={t("categoryWomen")} />
-          <CategoryCard href="/men" label={t("categoryMen")} />
+          <CategoryCard href="/women" label={t("categoryWomen")} src="/images/category/women.jpg" />
+          <CategoryCard href="/men" label={t("categoryMen")} src="/images/category/men.jpg" />
         </div>
       </section>
 
@@ -81,17 +87,21 @@ export default async function HomePage({
             </Link>
           </div>
           <div className="mt-10 grid gap-8 sm:grid-cols-3">
-            {[1, 2, 3].map((i) => (
-              <article key={i}>
-                <PlaceholderImage
-                  label={`Journal cover ${i}`}
-                  className="aspect-[4/5] w-full"
-                />
-                <h3 className="mt-4 text-base font-medium">
-                  Editorial story placeholder {i}
-                </h3>
-              </article>
-            ))}
+            {posts.map((post) => {
+              const title = loc === "vi" ? post.titleVi : post.titleEn;
+              return (
+                <Link key={post.slug} href={`/journal/${post.slug}`} className="group block">
+                  <PlaceholderImage
+                    label={title}
+                    src={post.coverImage}
+                    showLabel={false}
+                    sizes="(min-width: 640px) 33vw, 100vw"
+                    className="aspect-[4/5] w-full transition-transform duration-500 group-hover:scale-[1.02]"
+                  />
+                  <h3 className="mt-4 text-base font-medium">{title}</h3>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -120,13 +130,15 @@ export default async function HomePage({
   );
 }
 
-function CategoryCard({ href, label }: { href: string; label: string }) {
+function CategoryCard({ href, label, src }: { href: string; label: string; src: string }) {
   return (
     <Link href={href} className="group block">
       <div className="overflow-hidden">
         <PlaceholderImage
           label={label}
+          src={src}
           showLabel={false}
+          sizes="(min-width: 640px) 50vw, 100vw"
           className="aspect-[3/4] w-full transition-transform duration-500 group-hover:scale-[1.03]"
         />
       </div>

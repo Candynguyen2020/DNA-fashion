@@ -17,7 +17,9 @@ export function ProductCard({
       <div className="overflow-hidden bg-muted">
         <PlaceholderImage
           label={name}
+          src={product.images[0]}
           showLabel={false}
+          sizes="(min-width: 1024px) 33vw, 50vw"
           className="aspect-[3/4] w-full transition-transform duration-500 group-hover:scale-[1.03]"
         />
       </div>

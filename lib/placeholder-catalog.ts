@@ -8,6 +8,7 @@ export type PlaceholderProduct = {
   collectionSlug: string;
   descVi: string;
   descEn: string;
+  images: string[];
 };
 
 export type PlaceholderCollection = {
@@ -16,6 +17,7 @@ export type PlaceholderCollection = {
   nameEn: string;
   descVi: string;
   descEn: string;
+  heroImage: string;
 };
 
 export const collections: PlaceholderCollection[] = [
@@ -25,6 +27,7 @@ export const collections: PlaceholderCollection[] = [
     nameEn: "Signature Collection",
     descVi: "Những thiết kế tiêu biểu định hình phong cách Maison DnA.",
     descEn: "The pieces that define the Maison DnA silhouette.",
+    heroImage: "/images/collections/signature-collection.jpg",
   },
   {
     slug: "linen-edit",
@@ -32,6 +35,7 @@ export const collections: PlaceholderCollection[] = [
     nameEn: "The Linen Edit",
     descVi: "Vải lanh tự nhiên cho những ngày dài, thoáng mát và bền form.",
     descEn: "Natural linen for long days — breathable, structured, built to last.",
+    heroImage: "/images/collections/linen-edit.jpg",
   },
 ];
 
@@ -46,6 +50,11 @@ export const products: PlaceholderProduct[] = [
     collectionSlug: "signature-collection",
     descVi: "Blazer len cao cấp, may đo tinh xảo, form dáng thanh lịch.",
     descEn: "Premium wool blazer with precise tailoring and an elegant silhouette.",
+    images: [
+      "/images/products/tailored-wool-blazer-1.jpg",
+      "/images/products/tailored-wool-blazer-2.jpg",
+      "/images/products/tailored-wool-blazer-3.jpg",
+    ],
   },
   {
     slug: "organic-cotton-oxford-shirt",
@@ -57,6 +66,11 @@ export const products: PlaceholderProduct[] = [
     collectionSlug: "signature-collection",
     descVi: "Sơ mi Oxford dệt từ cotton organic, form regular fit dễ phối đồ.",
     descEn: "An Oxford shirt woven in organic cotton, cut for an easy regular fit.",
+    images: [
+      "/images/products/organic-cotton-oxford-shirt-1.jpg",
+      "/images/products/organic-cotton-oxford-shirt-2.jpg",
+      "/images/products/organic-cotton-oxford-shirt-3.jpg",
+    ],
   },
   {
     slug: "linen-trouser-set",
@@ -68,6 +82,11 @@ export const products: PlaceholderProduct[] = [
     collectionSlug: "linen-edit",
     descVi: "Quần lanh Châu Âu, form suông thoải mái, phù hợp khí hậu nhiệt đới.",
     descEn: "European linen trousers, a relaxed straight cut built for warm climates.",
+    images: [
+      "/images/products/linen-trouser-set-1.jpg",
+      "/images/products/linen-trouser-set-2.jpg",
+      "/images/products/linen-trouser-set-3.jpg",
+    ],
   },
   {
     slug: "silk-wrap-dress",
@@ -79,6 +98,11 @@ export const products: PlaceholderProduct[] = [
     collectionSlug: "signature-collection",
     descVi: "Váy lụa tơ tằm form wrap, tôn dáng và thoải mái cả ngày dài.",
     descEn: "A mulberry silk wrap dress, flattering and comfortable from morning to evening.",
+    images: [
+      "/images/products/silk-wrap-dress-1.jpg",
+      "/images/products/silk-wrap-dress-2.jpg",
+      "/images/products/silk-wrap-dress-3.jpg",
+    ],
   },
   {
     slug: "linen-midi-skirt",
@@ -90,6 +114,11 @@ export const products: PlaceholderProduct[] = [
     collectionSlug: "linen-edit",
     descVi: "Chân váy lanh dáng midi, form A-line dễ phối cùng áo sơ mi hoặc áo len.",
     descEn: "A midi-length linen skirt in an A-line cut, easy with a shirt or a knit.",
+    images: [
+      "/images/products/linen-midi-skirt-1.jpg",
+      "/images/products/linen-midi-skirt-2.jpg",
+      "/images/products/linen-midi-skirt-3.jpg",
+    ],
   },
   {
     slug: "cashmere-blend-sweater",
@@ -101,6 +130,11 @@ export const products: PlaceholderProduct[] = [
     collectionSlug: "signature-collection",
     descVi: "Áo len pha cashmere mềm mại, giữ ấm nhẹ nhàng cho ngày se lạnh.",
     descEn: "A soft wool-cashmere blend sweater, light warmth for cooler days.",
+    images: [
+      "/images/products/cashmere-blend-sweater-1.jpg",
+      "/images/products/cashmere-blend-sweater-2.jpg",
+      "/images/products/cashmere-blend-sweater-3.jpg",
+    ],
   },
 ];
 

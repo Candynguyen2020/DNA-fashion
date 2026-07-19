@@ -1,12 +1,35 @@
+import Image from "next/image";
+
 export function PlaceholderImage({
   label,
   className = "",
   showLabel = true,
+  src,
+  priority = false,
+  sizes = "(min-width: 1024px) 50vw, 100vw",
 }: {
   label: string;
   className?: string;
   showLabel?: boolean;
+  src?: string;
+  priority?: boolean;
+  sizes?: string;
 }) {
+  if (src) {
+    return (
+      <div className={`relative overflow-hidden bg-muted ${className}`}>
+        <Image
+          src={src}
+          alt={label}
+          fill
+          priority={priority}
+          sizes={sizes}
+          className="object-cover"
+        />
+      </div>
+    );
+  }
+
   return (
     <div
       role="img"

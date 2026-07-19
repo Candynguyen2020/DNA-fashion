@@ -27,7 +27,9 @@ export default async function JournalPage({
               <Link key={post.slug} href={`/journal/${post.slug}`} className="group block">
                 <PlaceholderImage
                   label={title}
+                  src={post.coverImage}
                   showLabel={false}
+                  sizes="(min-width: 640px) 33vw, 100vw"
                   className="aspect-[4/5] w-full transition-transform duration-500 group-hover:scale-[1.02]"
                 />
                 <h2 className="mt-4 text-base font-medium text-ink">{title}</h2>

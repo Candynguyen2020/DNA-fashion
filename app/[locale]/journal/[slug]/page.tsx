@@ -37,6 +37,8 @@ export default async function JournalPostPage({
       </h1>
       <PlaceholderImage
         label={title}
+        src={post.coverImage}
+        priority
         showLabel={false}
         className="mt-8 aspect-[16/9] w-full"
       />

@@ -1,5 +1,6 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { PageHero } from "@/components/storefront/page-hero";
+import { PlaceholderImage } from "@/components/ui/placeholder-image";
 import { LinkButton } from "@/components/ui/button";
 
 export default async function VipPage({
@@ -20,6 +21,12 @@ export default async function VipPage({
   return (
     <>
       <PageHero eyebrow={t("eyebrow")} title={t("title")} intro={t("intro")} />
+      <PlaceholderImage
+        label="VIP membership"
+        src="/images/accent/vip.jpg"
+        showLabel={false}
+        className="aspect-[21/9] w-full"
+      />
       <div className="mx-auto max-w-5xl px-4 py-14 sm:px-6 lg:px-8">
         <div className="grid gap-6 sm:grid-cols-3">
           {tiers.map((tier, i) => (

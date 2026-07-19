@@ -41,9 +41,25 @@ export default async function ProductPage({
     <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
       <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
         <div className="grid grid-cols-2 gap-3">
-          <PlaceholderImage label={`${name} — 1`} className="col-span-2 aspect-[4/5] w-full" />
-          <PlaceholderImage label={`${name} — 2`} className="aspect-square w-full" />
-          <PlaceholderImage label={`${name} — 3`} className="aspect-square w-full" />
+          <PlaceholderImage
+            label={`${name} — 1`}
+            src={product.images[0]}
+            priority
+            sizes="(min-width: 1024px) 50vw, 100vw"
+            className="col-span-2 aspect-[4/5] w-full"
+          />
+          <PlaceholderImage
+            label={`${name} — 2`}
+            src={product.images[1]}
+            sizes="(min-width: 1024px) 25vw, 50vw"
+            className="aspect-square w-full"
+          />
+          <PlaceholderImage
+            label={`${name} — 3`}
+            src={product.images[2]}
+            sizes="(min-width: 1024px) 25vw, 50vw"
+            className="aspect-square w-full"
+          />
         </div>
 
         <div className="lg:pt-4">
