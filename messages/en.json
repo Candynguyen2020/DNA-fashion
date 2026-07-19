@@ -1,0 +1,50 @@
+{
+  "brand": {
+    "name": "Maison DnA",
+    "tagline": "Premium fashion for men and women"
+  },
+  "nav": {
+    "women": "Women",
+    "men": "Men",
+    "collections": "Collections",
+    "journal": "Journal",
+    "booking": "Book an Appointment",
+    "about": "Our Story",
+    "contact": "Contact",
+    "search": "Search",
+    "account": "Account",
+    "cart": "Cart",
+    "vip": "VIP Membership"
+  },
+  "home": {
+    "heroEyebrow": "New Collection",
+    "heroTitle": "Elegance, Tailored",
+    "heroSubtitle": "Discover premium designs for men and women, where every stitch tells a story.",
+    "heroCta": "Explore the Collection",
+    "categoriesTitle": "Shop by Category",
+    "categoryWomen": "Womenswear",
+    "categoryMen": "Menswear",
+    "editorialTitle": "From the Maison Journal",
+    "editorialCta": "Read More",
+    "vipTitle": "VIP Membership Privileges",
+    "vipSubtitle": "Exclusive offers, personalized styling, and early access to limited collections.",
+    "vipCta": "Learn More",
+    "bookingTitle": "Book a Private Consultation",
+    "bookingSubtitle": "Experience personalized styling at our showroom.",
+    "bookingCta": "Book an Appointment"
+  },
+  "footer": {
+    "newsletterTitle": "Subscribe",
+    "newsletterSubtitle": "Be the first to know about new collections and exclusive offers.",
+    "newsletterPlaceholder": "Your email address",
+    "newsletterCta": "Subscribe",
+    "shop": "Shop",
+    "company": "Company",
+    "support": "Support",
+    "legal": "Legal",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy",
+    "returns": "Returns Policy",
+    "copyright": "All rights reserved, Maison DnA."
+  }
+}

@@ -1,0 +1,277 @@
+// Maison DnA — core commerce schema
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client"
+  output   = "../app/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum Gender {
+  men
+  women
+  unisex
+}
+
+enum ProductStatus {
+  draft
+  published
+  archived
+}
+
+enum StaffRole {
+  admin
+  manager
+  editor
+  fulfillment
+}
+
+enum OrderStatus {
+  pending_payment
+  pending_confirmation
+  paid
+  processing
+  shipped
+  completed
+  cancelled
+  refunded
+}
+
+enum PaymentProvider {
+  vnpay
+  momo
+  stripe
+  paypal
+  bank_transfer
+  cod
+}
+
+enum PaymentStatus {
+  initiated
+  succeeded
+  failed
+  refunded
+  awaiting_manual_confirmation
+}
+
+enum BookingStatus {
+  requested
+  confirmed
+  cancelled
+  completed
+  no_show
+}
+
+model Collection {
+  id        String    @id @default(cuid())
+  slug      String    @unique
+  nameVi    String
+  nameEn    String
+  descVi    String?   @db.Text
+  descEn    String?   @db.Text
+  heroImage String?
+  products  Product[]
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
+model Product {
+  id            String           @id @default(cuid())
+  slug          String           @unique
+  nameVi        String
+  nameEn        String
+  descriptionVi String           @db.Text
+  descriptionEn String           @db.Text
+  basePrice     Decimal          @db.Decimal(12, 2)
+  status        ProductStatus    @default(draft)
+  gender        Gender
+  material      String?
+  collectionId  String?
+  collection    Collection?      @relation(fields: [collectionId], references: [id])
+  variants      ProductVariant[]
+  images        ProductImage[]
+  createdAt     DateTime         @default(now())
+  updatedAt     DateTime         @updatedAt
+
+  @@index([status, gender])
+  @@index([collectionId])
+}
+
+model ProductVariant {
+  id            String      @id @default(cuid())
+  productId     String
+  product       Product     @relation(fields: [productId], references: [id], onDelete: Cascade)
+  sku           String      @unique
+  size          String?
+  color         String?
+  priceOverride Decimal?    @db.Decimal(12, 2)
+  stockQty      Int         @default(0)
+  cartItems     CartItem[]
+  orderItems    OrderItem[]
+
+  @@index([productId])
+}
+
+model ProductImage {
+  id        String  @id @default(cuid())
+  productId String
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  url       String
+  altVi     String?
+  altEn     String?
+  sortOrder Int     @default(0)
+
+  @@index([productId])
+}
+
+model Customer {
+  id            String     @id @default(cuid())
+  email         String     @unique
+  passwordHash  String?
+  fullName      String?
+  phone         String?
+  vipTierId     String?
+  vipTier       VipTier?   @relation(fields: [vipTierId], references: [id])
+  lifetimeSpend Decimal    @default(0) @db.Decimal(12, 2)
+  addresses     Address[]
+  orders        Order[]
+  bookings      Booking[]
+  carts         Cart[]
+  createdAt     DateTime   @default(now())
+  updatedAt     DateTime   @updatedAt
+}
+
+model Address {
+  id         String   @id @default(cuid())
+  customerId String
+  customer   Customer @relation(fields: [customerId], references: [id], onDelete: Cascade)
+  fullName   String
+  line1      String
+  line2      String?
+  ward       String?
+  city       String
+  province   String?
+  phone      String
+  isDefault  Boolean  @default(false)
+
+  @@index([customerId])
+}
+
+model Staff {
+  id           String    @id @default(cuid())
+  email        String    @unique
+  passwordHash String
+  fullName     String
+  role         StaffRole
+  createdAt    DateTime  @default(now())
+}
+
+model Cart {
+  id         String     @id @default(cuid())
+  customerId String?
+  customer   Customer?  @relation(fields: [customerId], references: [id])
+  guestToken String?    @unique
+  items      CartItem[]
+  updatedAt  DateTime   @updatedAt
+}
+
+model CartItem {
+  id        String         @id @default(cuid())
+  cartId    String
+  cart      Cart           @relation(fields: [cartId], references: [id], onDelete: Cascade)
+  variantId String
+  variant   ProductVariant @relation(fields: [variantId], references: [id])
+  qty       Int
+
+  @@unique([cartId, variantId])
+}
+
+model Order {
+  id              String              @id @default(cuid())
+  orderNumber     String              @unique
+  customerId      String
+  customer        Customer            @relation(fields: [customerId], references: [id])
+  status          OrderStatus         @default(pending_payment)
+  subtotal        Decimal             @db.Decimal(12, 2)
+  shippingFee     Decimal             @db.Decimal(12, 2)
+  total           Decimal             @db.Decimal(12, 2)
+  currency        String              @default("VND")
+  shippingAddress Json
+  locale          String              @default("vi")
+  items           OrderItem[]
+  payment         PaymentTransaction?
+  createdAt       DateTime            @default(now())
+  updatedAt       DateTime            @updatedAt
+
+  @@index([customerId])
+  @@index([status])
+}
+
+model OrderItem {
+  id            String         @id @default(cuid())
+  orderId       String
+  order         Order          @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  variantId     String
+  variant       ProductVariant @relation(fields: [variantId], references: [id])
+  qtyOrdered    Int
+  unitPrice     Decimal        @db.Decimal(12, 2)
+
+  @@index([orderId])
+}
+
+model PaymentTransaction {
+  id                    String          @id @default(cuid())
+  orderId               String          @unique
+  order                 Order           @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  provider              PaymentProvider
+  providerTransactionId String?
+  amount                Decimal         @db.Decimal(12, 2)
+  status                PaymentStatus   @default(initiated)
+  rawPayload            Json?
+  confirmedByStaffId    String?
+  createdAt             DateTime        @default(now())
+  updatedAt             DateTime        @updatedAt
+}
+
+model VipTier {
+  id        String     @id @default(cuid())
+  nameVi    String
+  nameEn    String
+  minSpend  Decimal    @db.Decimal(12, 2)
+  perksVi   String     @db.Text
+  perksEn   String     @db.Text
+  sortOrder Int        @default(0)
+  customers Customer[]
+}
+
+model Booking {
+  id          String        @id @default(cuid())
+  customerId  String
+  customer    Customer      @relation(fields: [customerId], references: [id])
+  serviceType String        @default("private_consultation")
+  slotStart   DateTime
+  slotEnd     DateTime
+  status      BookingStatus @default(requested)
+  notes       String?       @db.Text
+  createdAt   DateTime      @default(now())
+
+  @@index([customerId])
+  @@index([slotStart])
+}
+
+model BlogPost {
+  id          String    @id @default(cuid())
+  slug        String    @unique
+  titleVi     String
+  titleEn     String
+  bodyVi      String    @db.Text
+  bodyEn      String    @db.Text
+  coverImage  String?
+  authorId    String?
+  publishedAt DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}

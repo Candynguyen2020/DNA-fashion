@@ -1,0 +1,50 @@
+{
+  "brand": {
+    "name": "Maison DnA",
+    "tagline": "Thời trang cao cấp cho phái mạnh và phái đẹp"
+  },
+  "nav": {
+    "women": "Nữ",
+    "men": "Nam",
+    "collections": "Bộ sưu tập",
+    "journal": "Nhật ký",
+    "booking": "Đặt lịch hẹn",
+    "about": "Câu chuyện thương hiệu",
+    "contact": "Liên hệ",
+    "search": "Tìm kiếm",
+    "account": "Tài khoản",
+    "cart": "Giỏ hàng",
+    "vip": "Thành viên VIP"
+  },
+  "home": {
+    "heroEyebrow": "Bộ sưu tập mới",
+    "heroTitle": "Sự tinh tế được may đo",
+    "heroSubtitle": "Khám phá các thiết kế cao cấp dành cho nam và nữ, nơi từng đường kim mũi chỉ kể một câu chuyện.",
+    "heroCta": "Khám phá bộ sưu tập",
+    "categoriesTitle": "Mua sắm theo danh mục",
+    "categoryWomen": "Thời trang Nữ",
+    "categoryMen": "Thời trang Nam",
+    "editorialTitle": "Từ Nhật ký Maison",
+    "editorialCta": "Đọc thêm",
+    "vipTitle": "Đặc quyền thành viên VIP",
+    "vipSubtitle": "Ưu đãi riêng, tư vấn cá nhân hóa và quyền truy cập sớm vào các bộ sưu tập giới hạn.",
+    "vipCta": "Tìm hiểu thêm",
+    "bookingTitle": "Đặt lịch tư vấn riêng",
+    "bookingSubtitle": "Trải nghiệm dịch vụ tư vấn thời trang cá nhân tại showroom của chúng tôi.",
+    "bookingCta": "Đặt lịch hẹn"
+  },
+  "footer": {
+    "newsletterTitle": "Đăng ký nhận tin",
+    "newsletterSubtitle": "Nhận thông tin về bộ sưu tập mới và ưu đãi dành riêng cho bạn.",
+    "newsletterPlaceholder": "Địa chỉ email của bạn",
+    "newsletterCta": "Đăng ký",
+    "shop": "Mua sắm",
+    "company": "Thương hiệu",
+    "support": "Hỗ trợ",
+    "legal": "Pháp lý",
+    "terms": "Điều khoản dịch vụ",
+    "privacy": "Chính sách bảo mật",
+    "returns": "Chính sách đổi trả",
+    "copyright": "Bản quyền thuộc về Maison DnA."
+  }
+}
