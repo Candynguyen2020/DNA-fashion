@@ -12,7 +12,7 @@ export function SiteFooter() {
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-12 border-b border-white/15 pb-12 lg:grid-cols-[1.2fr_1fr_1fr_1fr]">
           <div>
-            <h2 className="font-display text-xl tracking-[0.1em]">{t("newsletterTitle")}</h2>
+            <h2 className="font-display text-xl font-semibold tracking-tight">{t("newsletterTitle")}</h2>
             <p className="mt-3 max-w-sm text-sm text-white/70">{t("newsletterSubtitle")}</p>
             <form className="mt-5 flex max-w-sm border border-white/30">
               <label htmlFor="footer-email" className="sr-only">
@@ -69,7 +69,7 @@ export function SiteFooter() {
 function FooterColumn({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <div>
-      <h3 className="text-sm tracking-[0.08em] uppercase text-white/80">{title}</h3>
+      <h3 className="text-xs tracking-[0.04em] uppercase text-white/80">{title}</h3>
       <ul className="mt-4 flex flex-col gap-3">{children}</ul>
     </div>
   );

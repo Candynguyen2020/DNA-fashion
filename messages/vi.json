@@ -3,6 +3,12 @@
     "name": "Maison DnA",
     "tagline": "Thời trang cao cấp cho phái mạnh và phái đẹp"
   },
+  "notFound": {
+    "eyebrow": "404",
+    "title": "Không tìm thấy trang này",
+    "body": "Trang bạn tìm có thể đã được đổi tên hoặc không còn tồn tại.",
+    "cta": "Về trang chủ"
+  },
   "nav": {
     "women": "Nữ",
     "men": "Nam",
@@ -21,6 +27,12 @@
     "heroTitle": "Sự tinh tế được may đo",
     "heroSubtitle": "Khám phá các thiết kế cao cấp dành cho nam và nữ, nơi từng đường kim mũi chỉ kể một câu chuyện.",
     "heroCta": "Khám phá bộ sưu tập",
+    "promise": {
+      "materials": "Vải organic & len Ý nhập trực tiếp",
+      "pricing": "Giá minh bạch — không qua trung gian",
+      "craft": "Hoàn thiện may đo trong 10 ngày",
+      "returns": "Đổi trả miễn phí trong 30 ngày"
+    },
     "categoriesTitle": "Mua sắm theo danh mục",
     "categoryWomen": "Thời trang Nữ",
     "categoryMen": "Thời trang Nam",
@@ -32,6 +44,127 @@
     "bookingTitle": "Đặt lịch tư vấn riêng",
     "bookingSubtitle": "Trải nghiệm dịch vụ tư vấn thời trang cá nhân tại showroom của chúng tôi.",
     "bookingCta": "Đặt lịch hẹn"
+  },
+  "category": {
+    "womenTitle": "Thời trang Nữ",
+    "womenIntro": "Váy, áo và trang phục may đo dành cho phái đẹp — hoàn thiện từ vải organic và lụa cao cấp.",
+    "menTitle": "Thời trang Nam",
+    "menIntro": "Blazer, sơ mi và trang phục công sở may đo — form dáng thanh lịch, chất liệu bền theo thời gian.",
+    "emptyState": "Sản phẩm đang được cập nhật. Quay lại sau nhé.",
+    "filterSize": "Kích cỡ",
+    "filterColor": "Màu sắc",
+    "filterPrice": "Khoảng giá",
+    "sortLabel": "Sắp xếp"
+  },
+  "collections": {
+    "title": "Bộ sưu tập",
+    "intro": "Mỗi bộ sưu tập là một câu chuyện riêng — từ chất liệu, dáng form đến bối cảnh mặc.",
+    "viewCollection": "Xem bộ sưu tập",
+    "detailIntro": "Những thiết kế tiêu biểu của bộ sưu tập này, chọn lọc theo chất liệu và form dáng.",
+    "backToCollections": "Quay lại danh sách bộ sưu tập"
+  },
+  "product": {
+    "materialLabel": "Chất liệu",
+    "sizeLabel": "Kích cỡ",
+    "colorLabel": "Màu sắc",
+    "addToCart": "Thêm vào giỏ",
+    "descriptionTitle": "Chi tiết sản phẩm",
+    "shippingNote": "Giao hàng toàn quốc trong 3-5 ngày. Đổi trả miễn phí trong 30 ngày.",
+    "relatedTitle": "Có thể bạn sẽ thích"
+  },
+  "journal": {
+    "title": "Nhật ký Maison",
+    "intro": "Câu chuyện về chất liệu, tay nghề thủ công và những con người đứng sau từng thiết kế.",
+    "backToJournal": "Quay lại Nhật ký",
+    "readingTime": "5 phút đọc"
+  },
+  "about": {
+    "eyebrow": "Câu chuyện thương hiệu",
+    "title": "May đo cho một cuộc sống chân thực",
+    "lead": "Maison DnA ra đời từ niềm tin rằng trang phục cao cấp không cần đi kèm mức giá xa xỉ phi lý — chỉ cần chất liệu tốt, tay nghề chỉn chu và một chuỗi cung ứng minh bạch.",
+    "body1": "Chúng tôi làm việc trực tiếp với các xưởng dệt và may tại Việt Nam, loại bỏ các lớp trung gian để giữ giá thành hợp lý mà không đánh đổi chất lượng.",
+    "body2": "Từng sản phẩm được kiểm định kỹ lưỡng trước khi đến tay khách hàng — vì chúng tôi tin một chiếc áo tốt nên đồng hành cùng bạn nhiều năm, không phải một mùa.",
+    "valuesTitle": "Điều chúng tôi coi trọng",
+    "value1Title": "Chất liệu thật",
+    "value1Body": "Cotton organic, len Ý, lụa tự nhiên — không viscose pha tạp giá rẻ.",
+    "value2Title": "Giá minh bạch",
+    "value2Body": "Không qua trung gian, không đội giá vô lý cho một cái tên thương hiệu.",
+    "value3Title": "Bền lâu",
+    "value3Body": "Đường may chắc chắn, kiểm định chất lượng trước khi xuất xưởng."
+  },
+  "contact": {
+    "title": "Liên hệ",
+    "intro": "Có câu hỏi về sản phẩm, đơn hàng hay hợp tác? Gửi tin nhắn cho chúng tôi.",
+    "nameLabel": "Họ và tên",
+    "emailLabel": "Email",
+    "messageLabel": "Nội dung",
+    "submit": "Gửi tin nhắn",
+    "emailUs": "Email cho chúng tôi",
+    "callUs": "Gọi cho chúng tôi",
+    "visitUs": "Ghé thăm showroom"
+  },
+  "booking": {
+    "eyebrow": "Dịch vụ tư vấn riêng",
+    "title": "Đặt lịch tư vấn tại showroom",
+    "intro": "Chọn ngày và khung giờ phù hợp — chuyên viên tư vấn của Maison DnA sẽ đồng hành cùng bạn chọn trang phục và số đo chuẩn xác.",
+    "nameLabel": "Họ và tên",
+    "emailLabel": "Email",
+    "phoneLabel": "Số điện thoại",
+    "dateLabel": "Ngày mong muốn",
+    "timeLabel": "Khung giờ",
+    "notesLabel": "Ghi chú (không bắt buộc)",
+    "submit": "Gửi yêu cầu đặt lịch",
+    "confirmNote": "Chúng tôi sẽ liên hệ xác nhận trong vòng 24 giờ."
+  },
+  "vip": {
+    "eyebrow": "Thành viên VIP",
+    "title": "Đặc quyền dành riêng cho bạn",
+    "intro": "Càng đồng hành cùng Maison DnA lâu, đặc quyền của bạn càng nhiều — từ ưu đãi sinh nhật đến quyền truy cập sớm các bộ sưu tập giới hạn.",
+    "tierSilverName": "Bạc",
+    "tierSilverPerk": "Ưu đãi sinh nhật, giao hàng miễn phí.",
+    "tierGoldName": "Vàng",
+    "tierGoldPerk": "Tư vấn phong cách riêng, ưu tiên đặt lịch hẹn.",
+    "tierPlatinumName": "Bạch Kim",
+    "tierPlatinumPerk": "Truy cập sớm bộ sưu tập giới hạn, quà tặng độc quyền.",
+    "cta": "Tạo tài khoản để bắt đầu tích lũy"
+  },
+  "account": {
+    "title": "Tài khoản",
+    "intro": "Đăng nhập để xem đơn hàng, lịch hẹn và đặc quyền thành viên VIP của bạn.",
+    "goLogin": "Đăng nhập",
+    "goRegister": "Tạo tài khoản mới"
+  },
+  "auth": {
+    "loginTitle": "Đăng nhập",
+    "loginIntro": "Đăng nhập để tiếp tục mua sắm và theo dõi đơn hàng.",
+    "registerTitle": "Tạo tài khoản",
+    "registerIntro": "Tạo tài khoản để lưu thông tin giao hàng và tích lũy đặc quyền VIP.",
+    "nameLabel": "Họ và tên",
+    "emailLabel": "Email",
+    "passwordLabel": "Mật khẩu",
+    "loginSubmit": "Đăng nhập",
+    "registerSubmit": "Tạo tài khoản",
+    "noAccount": "Chưa có tài khoản?",
+    "haveAccount": "Đã có tài khoản?",
+    "registerLink": "Đăng ký ngay",
+    "loginLink": "Đăng nhập"
+  },
+  "cart": {
+    "title": "Giỏ hàng",
+    "emptyTitle": "Giỏ hàng của bạn đang trống",
+    "emptyBody": "Ghé qua bộ sưu tập của chúng tôi để tìm sản phẩm yêu thích.",
+    "continueShopping": "Tiếp tục mua sắm"
+  },
+  "search": {
+    "title": "Tìm kiếm",
+    "placeholder": "Tìm sản phẩm, bộ sưu tập...",
+    "emptyState": "Nhập từ khóa để tìm kiếm sản phẩm."
+  },
+  "legal": {
+    "termsTitle": "Điều khoản dịch vụ",
+    "privacyTitle": "Chính sách bảo mật",
+    "returnsTitle": "Chính sách đổi trả",
+    "placeholderBody": "Nội dung chi tiết đang được đội ngũ pháp lý của Maison DnA hoàn thiện và sẽ được cập nhật trước khi website chính thức ra mắt."
   },
   "footer": {
     "newsletterTitle": "Đăng ký nhận tin",

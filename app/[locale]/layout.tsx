@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bodoni_Moda, Jost } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -8,16 +8,10 @@ import { SiteHeader } from "@/components/storefront/site-header";
 import { SiteFooter } from "@/components/storefront/site-footer";
 import "../globals.css";
 
-const bodoni = Bodoni_Moda({
-  variable: "--font-bodoni",
+const jakarta = Plus_Jakarta_Sans({
+  variable: "--font-jakarta",
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
-});
-
-const jost = Jost({
-  variable: "--font-jost",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -51,9 +45,9 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={`${bodoni.variable} ${jost.variable} h-full antialiased`}
+      className={`${jakarta.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-ivory text-ink">
+      <body className="min-h-full flex flex-col bg-paper text-ink">
         <NextIntlClientProvider messages={messages}>
           <SiteHeader />
           <main className="flex-1">{children}</main>

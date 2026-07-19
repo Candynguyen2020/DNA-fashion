@@ -3,6 +3,12 @@
     "name": "Maison DnA",
     "tagline": "Premium fashion for men and women"
   },
+  "notFound": {
+    "eyebrow": "404",
+    "title": "This page can't be found",
+    "body": "The page you're looking for may have moved or no longer exists.",
+    "cta": "Back to Home"
+  },
   "nav": {
     "women": "Women",
     "men": "Men",
@@ -21,6 +27,12 @@
     "heroTitle": "Elegance, Tailored",
     "heroSubtitle": "Discover premium designs for men and women, where every stitch tells a story.",
     "heroCta": "Explore the Collection",
+    "promise": {
+      "materials": "Organic cotton & Italian wool, sourced direct",
+      "pricing": "Honest pricing — no middleman markup",
+      "craft": "Tailored and finished within 10 days",
+      "returns": "Free returns within 30 days"
+    },
     "categoriesTitle": "Shop by Category",
     "categoryWomen": "Womenswear",
     "categoryMen": "Menswear",
@@ -32,6 +44,127 @@
     "bookingTitle": "Book a Private Consultation",
     "bookingSubtitle": "Experience personalized styling at our showroom.",
     "bookingCta": "Book an Appointment"
+  },
+  "category": {
+    "womenTitle": "Womenswear",
+    "womenIntro": "Dresses, tops, and tailored pieces for women — finished in organic fabrics and premium silk.",
+    "menTitle": "Menswear",
+    "menIntro": "Tailored blazers, shirts, and workwear — elegant silhouettes in fabrics built to last.",
+    "emptyState": "New pieces are on the way. Check back soon.",
+    "filterSize": "Size",
+    "filterColor": "Color",
+    "filterPrice": "Price",
+    "sortLabel": "Sort"
+  },
+  "collections": {
+    "title": "Collections",
+    "intro": "Each collection tells its own story — in fabric, in silhouette, in the life it's made for.",
+    "viewCollection": "View Collection",
+    "detailIntro": "The signature pieces of this collection, chosen for fabric and fit.",
+    "backToCollections": "Back to Collections"
+  },
+  "product": {
+    "materialLabel": "Material",
+    "sizeLabel": "Size",
+    "colorLabel": "Color",
+    "addToCart": "Add to Cart",
+    "descriptionTitle": "Product Details",
+    "shippingNote": "Nationwide delivery in 3-5 days. Free returns within 30 days.",
+    "relatedTitle": "You May Also Like"
+  },
+  "journal": {
+    "title": "The Maison Journal",
+    "intro": "Stories on fabric, craft, and the people behind every piece.",
+    "backToJournal": "Back to Journal",
+    "readingTime": "5 min read"
+  },
+  "about": {
+    "eyebrow": "Our Story",
+    "title": "Tailoring for a real life",
+    "lead": "Maison DnA was founded on a simple belief: premium clothing shouldn't require an unreasonable price tag — just good materials, careful craft, and a transparent supply chain.",
+    "body1": "We work directly with mills and ateliers across Vietnam, cutting out the middlemen to keep prices honest without cutting corners on quality.",
+    "body2": "Every piece is inspected before it reaches you — because we believe a well-made garment should stay with you for years, not just a season.",
+    "valuesTitle": "What we stand for",
+    "value1Title": "Real materials",
+    "value1Body": "Organic cotton, Italian wool, natural silk — no cheap viscose blends.",
+    "value2Title": "Honest pricing",
+    "value2Body": "No middlemen, no markup for a name on a label.",
+    "value3Title": "Built to last",
+    "value3Body": "Reinforced seams, quality-checked before it ever leaves the atelier."
+  },
+  "contact": {
+    "title": "Contact",
+    "intro": "Questions about a product, an order, or a partnership? Send us a message.",
+    "nameLabel": "Full name",
+    "emailLabel": "Email",
+    "messageLabel": "Message",
+    "submit": "Send Message",
+    "emailUs": "Email us",
+    "callUs": "Call us",
+    "visitUs": "Visit the showroom"
+  },
+  "booking": {
+    "eyebrow": "Private Styling",
+    "title": "Book a showroom consultation",
+    "intro": "Choose a date and time that works for you — a Maison DnA stylist will help you find the right fit and pieces.",
+    "nameLabel": "Full name",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone number",
+    "dateLabel": "Preferred date",
+    "timeLabel": "Preferred time",
+    "notesLabel": "Notes (optional)",
+    "submit": "Request Appointment",
+    "confirmNote": "We'll confirm your booking within 24 hours."
+  },
+  "vip": {
+    "eyebrow": "VIP Membership",
+    "title": "Privileges made for you",
+    "intro": "The longer you stay with Maison DnA, the more you unlock — from birthday gifts to early access to limited collections.",
+    "tierSilverName": "Silver",
+    "tierSilverPerk": "Birthday gift, free shipping.",
+    "tierGoldName": "Gold",
+    "tierGoldPerk": "Personal styling session, priority booking.",
+    "tierPlatinumName": "Platinum",
+    "tierPlatinumPerk": "Early access to limited collections, exclusive gifts.",
+    "cta": "Create an account to start earning"
+  },
+  "account": {
+    "title": "Account",
+    "intro": "Sign in to view your orders, appointments, and VIP privileges.",
+    "goLogin": "Log In",
+    "goRegister": "Create Account"
+  },
+  "auth": {
+    "loginTitle": "Log In",
+    "loginIntro": "Log in to continue shopping and track your orders.",
+    "registerTitle": "Create Account",
+    "registerIntro": "Create an account to save your delivery details and start earning VIP privileges.",
+    "nameLabel": "Full name",
+    "emailLabel": "Email",
+    "passwordLabel": "Password",
+    "loginSubmit": "Log In",
+    "registerSubmit": "Create Account",
+    "noAccount": "Don't have an account?",
+    "haveAccount": "Already have an account?",
+    "registerLink": "Sign up",
+    "loginLink": "Log in"
+  },
+  "cart": {
+    "title": "Cart",
+    "emptyTitle": "Your cart is empty",
+    "emptyBody": "Browse our collections to find something you'll love.",
+    "continueShopping": "Continue Shopping"
+  },
+  "search": {
+    "title": "Search",
+    "placeholder": "Search products, collections...",
+    "emptyState": "Type a keyword to search."
+  },
+  "legal": {
+    "termsTitle": "Terms of Service",
+    "privacyTitle": "Privacy Policy",
+    "returnsTitle": "Returns Policy",
+    "placeholderBody": "Full legal copy is being finalized by Maison DnA's legal counsel and will be published before the site launches."
   },
   "footer": {
     "newsletterTitle": "Subscribe",

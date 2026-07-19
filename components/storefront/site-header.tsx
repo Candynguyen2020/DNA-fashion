@@ -22,7 +22,7 @@ export function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-border bg-ivory/95 backdrop-blur supports-[backdrop-filter]:bg-ivory/80">
+    <header className="sticky top-0 z-40 border-b border-border bg-paper/95 backdrop-blur supports-[backdrop-filter]:bg-paper/80">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <button
           type="button"
@@ -40,26 +40,27 @@ export function SiteHeader() {
 
         <Link
           href="/"
-          className="font-display text-2xl tracking-[0.15em] text-ink"
+          className="font-display text-xl font-semibold tracking-tight text-ink"
           aria-label={tBrand("name")}
         >
           {tBrand("name")}
         </Link>
 
-        <nav className="hidden items-center gap-8 lg:flex" aria-label="Main">
+        <nav className="hidden items-center gap-7 lg:flex" aria-label="Main">
           {navItems.map((item) => (
             <Link
               key={item.key}
               href={item.href}
-              className="text-sm tracking-[0.06em] uppercase text-ink transition-colors hover:text-gold"
+              className="group relative text-[15px] text-ink"
             >
               {t(item.key)}
+              <span className="absolute -bottom-1 left-0 h-px w-0 bg-ink transition-all duration-200 group-hover:w-full" />
             </Link>
           ))}
         </nav>
 
         <div className="flex items-center gap-4">
-          <div className="hidden items-center gap-1 text-sm uppercase tracking-[0.06em] sm:flex">
+          <div className="hidden items-center gap-1 text-[13px] tracking-[0.02em] sm:flex">
             {routing.locales.map((loc, i) => (
               <span key={loc} className="flex items-center gap-1">
                 {i > 0 && <span className="text-border">/</span>}
@@ -70,7 +71,7 @@ export function SiteHeader() {
                   className={
                     locale === loc
                       ? "text-ink"
-                      : "text-muted-foreground hover:text-gold"
+                      : "text-muted-foreground hover:text-ink"
                   }
                 >
                   {loc.toUpperCase()}
@@ -78,6 +79,17 @@ export function SiteHeader() {
               </span>
             ))}
           </div>
+
+          <Link
+            href="/search"
+            aria-label={t("search")}
+            className="hidden h-11 w-11 items-center justify-center sm:flex"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="11" cy="11" r="7" stroke="currentColor" strokeWidth="1.4" />
+              <path d="m20 20-3.2-3.2" stroke="currentColor" strokeWidth="1.4" />
+            </svg>
+          </Link>
 
           <Link
             href="/account"
@@ -123,7 +135,7 @@ export function SiteHeader() {
                 <Link
                   href={item.href}
                   onClick={() => setMenuOpen(false)}
-                  className="flex min-h-11 items-center text-sm tracking-[0.06em] uppercase text-ink"
+                  className="flex min-h-11 items-center text-[15px] text-ink"
                 >
                   {t(item.key)}
                 </Link>
@@ -136,7 +148,7 @@ export function SiteHeader() {
                   href={pathname}
                   locale={loc}
                   onClick={() => setMenuOpen(false)}
-                  className={`flex min-h-11 items-center text-sm uppercase tracking-[0.06em] ${
+                  className={`flex min-h-11 items-center text-[13px] tracking-[0.02em] ${
                     locale === loc ? "text-ink" : "text-muted-foreground"
                   }`}
                 >
